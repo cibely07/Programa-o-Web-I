@@ -1,0 +1,21 @@
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg1:#87CEEB;--bg2:#E0F6FF;--ground:#2e7d32
+}
+body{background:linear-gradient(var(--bg1),var(--bg2));font-family:system-ui,Segoe UI,Roboto,Arial;height:100vh;display:flex;align-items:center;justify-content:center}
+.stage{width:100%;max-width:980px;position:relative}
+.hud{display:flex;justify-content:space-between;padding:12px 6px}
+.hud .score,.hud .high{background:#fff;padding:8px 12px;border-radius:8px;border:2px dashed #000;font-family:monospace}
+.gameArea{position:relative;height:520px;background:linear-gradient(#bff0ff,#e6fbff);overflow:hidden;border:6px solid #0b6623;border-bottom-width:18px}
+.ground{position:absolute;left:0;right:0;bottom:0;height:72px;background:linear-gradient(#2e7d32,#1b5e20);z-index:2}
+.mario{position:absolute;left:8%;bottom:72px;width:96px;height:auto;z-index:6;transition:bottom 120ms ease-out}
+.mario.fly{transform:translateY(-8px) scale(1.02);filter:drop-shadow(0 6px 6px rgba(0,0,0,0.25))}
+.obstacles{position:absolute;inset:0;pointer-events:none}
+.obstacle{position:absolute;right:-160px;will-change:transform;z-index:4}
+.obstacle.pipe{width:72px;height:112px;bottom:72px;background-image:url("../images/pipe.png");background-size:contain;background-repeat:no-repeat}
+.obstacle.bullet{width:64px;height:64px;bottom:160px;background-image:url("../images/bullet.png");background-size:contain;background-repeat:no-repeat}
+.overlay{position:absolute;inset:0;background:linear-gradient(rgba(255,255,255,0.9),rgba(255,255,255,0.7));display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;z-index:20}
+.overlay button{padding:10px 16px;border-radius:8px;background:#ff5555;color:#fff;border:none;cursor:pointer}
+.gameOver{position:absolute;left:50%;top:40%;transform:translateX(-50%);background:#fff;padding:18px;border-radius:8px;border:3px dashed #000;display:none;z-index:30;text-align:center}
+.gameOver button{padding:8px 12px;margin-top:10px;background:#0b6623;color:#fff;border:none;border-radius:6px;cursor:pointer}
+@media(max-width:480px){.mario{left:6%;width:72px}.obstacle.pipe{width:56px;height:86px}.obstacle.bullet{width:48px;height:48px}}

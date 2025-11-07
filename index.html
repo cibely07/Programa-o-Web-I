@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Super Mario - Evolução</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="stage" id="stage" tabindex="0">
+    <div class="hud">
+      <div class="score">Pontos: <span id="score">0</span></div>
+      <div class="high">Melhor: <span id="high">0</span></div>
+    </div>
+
+    <div id="gameArea" class="gameArea">
+      <img id="mario" class="mario" src="images/mario-starter.gif" alt="mario">
+      <div id="obstacles" class="obstacles"></div>
+      <div class="ground"></div>
+    </div>
+
+    <div id="overlay" class="overlay">
+      <h1>Mini Mario</h1>
+      <p>Pressione <strong>Space</strong> ou toque para pular e iniciar.</p>
+      <button id="btnStart">Iniciar</button>
+    </div>
+
+    <div id="gameOver" class="gameOver">
+      <h2>Game Over</h2>
+      <p>Pontos finais: <span id="finalScore">0</span></p>
+      <button id="btnRestart">Reiniciar</button>
+    </div>
+  </div>
+
+  <audio id="bg" src="sounds/game.mp3" loop preload="auto"></audio>
+  <audio id="sJump" src="sounds/jump.wav" preload="auto"></audio>
+  <audio id="sDie" src="sounds/mariodie.wav" preload="auto"></audio>
+  <audio id="sPower" src="sounds/powerup.wav" preload="auto"></audio>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
