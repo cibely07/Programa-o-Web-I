@@ -1,0 +1,55 @@
+/*  só pra ficar bonito mesmo :) */
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f3f3f3;
+  margin: 0;
+}
+
+header {
+  background: #333;
+  color: #f7df1e;
+  padding: 25px;
+  text-align: center;
+}
+
+main {
+  max-width: 800px;
+  margin: 30px auto;
+  background: white;
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #00000020;
+}
+
+h2 {
+  margin-top: 40px;
+  border-left: 4px solid #f7df1e;
+  padding-left: 10px;
+}
+
+button {
+  margin-top: 10px;
+  background: #f7df1e;
+  border: none;
+  padding: 10px 15px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  opacity: .8;
+}
+
+.resultado {
+  background: #fafafa;
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-family: monospace;
+  white-space: pre-line;
+}
+
+
